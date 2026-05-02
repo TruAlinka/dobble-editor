@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dobble Game Editor</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="editor">
+    <h1>Dobble Game Editor</h1>
+    <form id="form">
+      <!-- Ввод лексики/картинок -->
+      <label for="words">Слова, emoji или ссылки (через запятую):</label>
+      <textarea id="words" rows="3" placeholder="cat, dog, teacher, 🦁, https://img.com/cat.png"></textarea>
+      
+      <label for="numOnCard">Элементов на карточке (6–8):</label>
+      <select id="numOnCard">
+        <option value="6" selected>6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+      </select>
+      
+      <!-- Выбор языка -->
+      <label for="lang">Язык интерфейса:</label>
+      <select id="lang">
+        <option value="ru">Русский</option>
+        <option value="en" selected>English</option>
+        <option value="de">Deutsch</option>
+        <option value="es">Español</option>
+        <option value="fr">Français</option>
+      </select>
+      
+      <label for="bgcolor">Фон карточек:</label>
+      <input type="color" id="bgcolor" value="#ffffff">
+      <label><input type="checkbox" id="transparent"> Прозрачный фон</label>
+      
+      <button type="button" id="generate">Генерировать игру</button>
+    </form>
+    <div id="gameContainer"></div>
+    <div id="iframeCodeContainer" style="display:none;">
+      <label>Код для вставки в Genially:</label>
+      <input type="text" id="iframeCode" readonly style="width:100%;">
+    </div>
+    <button id="startGame" style="display:none;">Старт</button>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
