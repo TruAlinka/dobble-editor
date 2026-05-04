@@ -4,23 +4,23 @@
   <meta charset="UTF-8">
   <title>Dobble Game Editor</title>
   <link rel="stylesheet" href="styles.css">
+  <!-- Рекомендуется подключить Montserrat для красивого шрифта -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
 </head>
 <body>
   <div id="editor">
     <h1>Dobble Game Editor</h1>
     <form id="form">
-      <!-- Ввод лексики/картинок -->
       <label for="words">Слова, emoji или ссылки (через запятую):</label>
-      <textarea id="words" rows="3" placeholder="cat, dog, teacher, 🦁, https://img.com/cat.png"></textarea>
-      
+      <textarea id="words" rows="3" placeholder="cat, dog, teacher, 🦁, https://img.com/flag.png"></textarea>
+
       <label for="numOnCard">Элементов на карточке (6–8):</label>
       <select id="numOnCard">
         <option value="6" selected>6</option>
         <option value="7">7</option>
         <option value="8">8</option>
       </select>
-      
-      <!-- Выбор языка -->
+
       <label for="lang">Язык интерфейса:</label>
       <select id="lang">
         <option value="ru">Русский</option>
@@ -31,7 +31,7 @@
       </select>
       
       <label for="bgcolor">Фон карточек:</label>
-      <input type="color" id="bgcolor" value="#ffffff">
+      <input type="color" id="bgcolor" value="#e2d9fd">
       <label><input type="checkbox" id="transparent"> Прозрачный фон</label>
       
       <button type="button" id="generate">Генерировать игру</button>
