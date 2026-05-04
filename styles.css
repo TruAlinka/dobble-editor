@@ -1,0 +1,65 @@
+body {
+  font-family: 'Montserrat', 'Comic Sans MS', Arial, sans-serif;
+  background: linear-gradient(130deg, #d5cafd 60%, #cfc8f7 100%);
+  min-height: 100vh;
+}
+
+#editor {
+  background: #efeafdcc;
+  margin: 30px auto;
+  padding: 28px 36px;
+  width: 670px;
+  border-radius: 32px;
+  box-shadow: 0 4px 28px #baa7ee55;
+}
+
+label {
+  display: block;
+  margin: 12px 0 5px;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  color: #7956f7;
+}
+
+textarea, select, input[type="color"] {
+  width: 100%;
+  border-radius: 10px;
+  min-height: 35px;
+  margin-bottom: 8px;
+  border: 1px solid #c7bfff;
+  font-size: 17px;
+  padding: 7px;
+  font-family: inherit;
+}
+
+textarea { min-height: 65px; }
+
+button {
+  margin: 11px 0 6px 0;
+  padding: 12px 32px;
+  background: linear-gradient(90deg, #7956f7, #b8a1ee);
+  color: #fff;
+  font-weight: bold;
+  border: 0;
+  border-radius: 13px;
+  font-size: 20px;
+  box-shadow: 0 3px 14px #7956f759;
+  cursor: pointer;
+  letter-spacing: 2px;
+  transition: background 0.2s;
+}
+button:hover { background: linear-gradient(90deg, #d2b8fc, #a08cf1); }
+
+#gameContainer {
+  background: transparent;
+  margin: 14px 0;
+  min-height: 120px;
+}
+
+input[type="text"][readonly] {
+  font-size: 14px;
+  color: #7956f7;
+  background: #f7f5fe;
+  margin-top: 7px;
+  margin-bottom: 5px;
+}
