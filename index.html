@@ -4,23 +4,29 @@
   <meta charset="UTF-8">
   <title>Dobble Game Editor</title>
   <link rel="stylesheet" href="styles.css">
-  <!-- Рекомендуется подключить Montserrat для красивого шрифта -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
 </head>
 <body>
   <div id="editor">
     <h1>Dobble Game Editor</h1>
-    <form id="form">
-      <label for="words">Слова, emoji или ссылки (через запятую):</label>
+    <div class="howto">
+      <p>
+        Введите <b>ровно 31, 43 или 57 слов/картинок</b> (без повторов) — это нужно для настоящей Dobble-игры.<br>
+        <b>31 элемент</b> — для 6 элементов на карточке<br>
+        <b>43 элемента</b> — для 7 элементов на карточке<br>
+        <b>57 элементов</b> — для 8 элементов на карточке<br>
+        <span style="color:#ae2d2d">Важно: только такие варианты дают гарантию настоящей dobble-математики (ровно 1 совпадение в каждой паре).</span>
+      </p>
+    </div>
+    <form id="form" autocomplete="off">
+      <label for="words">Введите слова, emoji или ссылки на картинки (через запятую):</label>
       <textarea id="words" rows="3" placeholder="cat, dog, teacher, 🦁, https://img.com/flag.png"></textarea>
-
-      <label for="numOnCard">Элементов на карточке (6–8):</label>
+      <label for="numOnCard">Элементов на карточке (6, 7 или 8):</label>
       <select id="numOnCard">
-        <option value="6" selected>6</option>
-        <option value="7">7</option>
+        <option value="6">6</option>
+        <option value="7" selected>7</option>
         <option value="8">8</option>
       </select>
-
       <label for="lang">Язык интерфейса:</label>
       <select id="lang">
         <option value="ru">Русский</option>
@@ -29,11 +35,9 @@
         <option value="es">Español</option>
         <option value="fr">Français</option>
       </select>
-      
       <label for="bgcolor">Фон карточек:</label>
       <input type="color" id="bgcolor" value="#e2d9fd">
       <label><input type="checkbox" id="transparent"> Прозрачный фон</label>
-      
       <button type="button" id="generate">Генерировать игру</button>
     </form>
     <div id="gameContainer"></div>
